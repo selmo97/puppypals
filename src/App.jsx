@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { puppyList } from "./data.js";
+import Puppy from "./components/Puppy.jsx"
 
 function App() {
-  const [puppies] = useState(puppyList)
+  const [puppies, setPuppies] = useState(puppyList)
   const [featPupId, setFeatPupId] = useState(null)
 
   console.log("puppyList: ", puppyList);
@@ -26,6 +27,7 @@ key={puppy.id}>{puppy.name}</p>;
         </div>
       )}
       
+      < Puppy puppyName="Zack" /> 
 
     </div>
   );
